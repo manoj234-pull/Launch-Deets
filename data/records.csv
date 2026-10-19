@@ -1,0 +1,23 @@
+record_id,launch_id,entity_id,event_type,occurred_at,severity,status,component_id,summary,value,unit,source_id,revision,synthetic,revised_at
+REC-L7-001,L7-ALPHA,LAUNCH-L7-ALPHA,launch,2026-04-12T08:00:00Z,info,completed,,Launch-Deets Alpha lifted off from Pad A,, ,DOC-L7-001,1,true,
+REC-L7-002,L7-ALPHA,COMP-TM-04,component,2026-04-12T07:42:00Z,info,nominal,TM-04,Telemetry multiplexer TM-04 passed preflight with 98.6 percent link margin,98.6,percent,DOC-L7-001,1,true,
+REC-L7-003,L7-ALPHA,INC-L7-01,incident,2026-04-12T08:03:12Z,major,closed,TM-04,Telemetry channel TM-04 dropped packets for 41 seconds after liftoff,41,seconds,DOC-L7-002,1,true,
+REC-L7-004,L7-ALPHA,ACT-L7-01,action,2026-04-15T16:00:00Z,info,verified,TM-04,Added a 120 millisecond debounce window to the TM-04 link monitor,120,milliseconds,DOC-L7-003,1,true,
+REC-L7-005,L7-BRAVO,LAUNCH-L7-BRAVO,launch,2026-05-03T09:30:00Z,info,completed,,Launch-Deets Bravo lifted off from Pad B,, ,DOC-L7-004,1,true,
+REC-L7-006,L7-BRAVO,COMP-VL-02,component,2026-05-03T09:12:00Z,info,nominal,VL-02,Valve actuator VL-02 showed a 0.8 degree position oscillation during countdown,0.8,degrees,DOC-L7-004,1,true,
+REC-L7-007,L7-BRAVO,INC-L7-02,incident,2026-05-03T09:28:44Z,moderate,closed,VL-02,VL-02 position oscillation triggered a 17 second hold; launch proceeded after stable readings,17,seconds,DOC-L7-005,1,true,
+REC-L7-008,L7-BRAVO,ACT-L7-02,action,2026-05-06T12:00:00Z,info,verified,VL-02,Replaced the actuator bearing and added a countdown vibration check,, ,DOC-L7-006,1,true,
+REC-L7-009,L7-CHARLIE,LAUNCH-L7-CHARLIE,launch,2026-06-21T11:00:00Z,info,completed,,Launch-Deets Charlie lifted off from Pad A,, ,DOC-L7-007,1,true,
+REC-L7-010,L7-CHARLIE,COMP-IM-03,component,2026-06-21T10:48:00Z,info,nominal,IM-03,Inertial measurement unit IM-03 firmware revision C7 was installed, C7,revision,DOC-L7-007,1,true,
+REC-L7-011,L7-CHARLIE,INC-L7-03,incident,2026-06-21T11:06:09Z,major,closed,IM-03,IM-03 produced a transient 0.42 degree yaw bias for 26 seconds,0.42,degrees,DOC-L7-008,1,true,
+REC-L7-012,L7-CHARLIE,ACT-L7-03,action,2026-06-25T18:30:00Z,info,verified,IM-03,Released firmware C8 with a temperature compensation table,, ,DOC-L7-009,2,true,
+REC-L7-013,L7-DELTA,LAUNCH-L7-DELTA,launch,2026-07-19T06:45:00Z,info,completed,,Launch-Deets Delta lifted off from Pad C,, ,DOC-L7-010,1,true,
+REC-L7-014,L7-DELTA,COMP-PR-08,component,2026-07-19T06:30:00Z,info,nominal,PR-08,Pressure regulator PR-08 reported a 12 kilopascal inlet fluctuation,12,kPa,DOC-L7-010,1,true,
+REC-L7-015,L7-DELTA,INC-L7-04,incident,2026-07-19T06:43:31Z,moderate,closed,PR-08,PR-08 inlet pressure fluctuation delayed ignition by 9 seconds,9,seconds,DOC-L7-011,1,true,
+REC-L7-016,L7-DELTA,ACT-L7-04,action,2026-07-22T14:00:00Z,info,verified,PR-08,Recalibrated the regulator and added a pressure trend alert,, ,DOC-L7-012,1,true,
+REC-L7-017,L7-ECHO,LAUNCH-L7-ECHO,launch,2026-08-02T13:15:00Z,info,completed,,Launch-Deets Echo lifted off from Pad B,, ,DOC-L7-013,1,true,
+REC-L7-018,L7-ECHO,COMP-PD-11,component,2026-08-02T12:51:00Z,info,nominal,PD-11,Power distribution unit PD-11 passed load test at 99.1 percent,99.1,percent,DOC-L7-013,1,true,
+REC-L7-019,L7-ECHO,INC-L7-05,incident,2026-08-02T13:18:20Z,major,closed,PD-11,PD-11 bus B registered a 33 millisecond voltage sag after stage separation,33,milliseconds,DOC-L7-014,1,true,
+REC-L7-020,L7-ECHO,ACT-L7-05,action,2026-08-05T15:45:00Z,info,verified,PD-11,Increased bus B capacitor bank capacity by 8 percent,8,percent,DOC-L7-015,1,true,
+REC-L7-021,L7-ALPHA,INC-L7-01,incident_revision,2026-04-12T08:03:12Z,info,supersedes-revision-1,TM-04,Initial report estimated the packet-loss interval at 38 seconds; final analysis confirmed 41 seconds,41,seconds,DOC-L7-016,2,true,2026-04-13
+REC-L7-022,L7-CHARLIE,INC-L7-03,incident_revision,2026-06-21T11:06:09Z,info,supersedes-revision-1,IM-03,Revision 2 clarified yaw bias was measured against ground reference,0.42,degrees,DOC-L7-017,2,true,2026-06-26

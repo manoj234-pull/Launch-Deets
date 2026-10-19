@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "launch-deets"
+version = "0.1.0"
+description = "Synthetic, notebook-first agentic RAG demonstration for the Launch-Deets archive."
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=2.1",
+    "python-dotenv>=1.0",
+    "typesafe-sdk>=0.7.5",
+    "langchain-text-splitters>=0.3",
+    "langchain-community>=0.3",
+    "rank-bm25>=0.2",
+    "langsmith>=0.1",
+]
+
+[project.optional-dependencies]
+ui = ["streamlit>=1.66.0,<2"]
+rag = [
+  "langchain>=0.3",
+  "langchain-openai>=0.2",
+  "langgraph>=0.2",
+  "pinecone>=5.0",
+  "neo4j>=5.20",
+]
+notebook = ["jupyterlab>=4.2", "ipykernel>=6.29", "openai>=1.0"]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
